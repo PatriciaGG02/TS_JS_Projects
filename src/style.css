@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #0834ac; /*Azul de Dabante*/
+  --color-secondary: #ff5b41; /*Naranja de Dabante*/
+  --color-danger: red; /*Rojo de Dabante*/
+  --color-gray-light: #e8e4e4; /*Gris claro de Dabante*/
+}
+
+@layer components {
+  .line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    border-bottom: 2px solid #a0a4ac;
+  }
+}
+
+.synoptic_table {
+  @apply border-2 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow bg-white;
+}
